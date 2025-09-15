@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusive Hire | Sunday Walton Hall Hotel & Spa</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <style>
+      :root {
+        --primary-color: #2b4e72; /* Steel blue for sophistication */
+        --secondary-color: #1a2e3a; /* Deep navy for elegance */
+        --accent-color: #8b5e3c; /* Warm brown for Walton Hall’s historic charm */
+        --highlight-color: #d4a373; /* Gold as secondary accent from Cardiff */
+        --light-color: #f9f9f9; /* Near-white for clean backgrounds */
+        --dark-color: #1a1a1a; /* Near-black for text */
+        --border-color: #e0e0e0; /* Light gray for borders */
+        --transition: all 0.3s ease;
+        --shadow-light: 0 4px 16px rgba(0, 0, 0, 0.1);
+        --shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.2);
+        --header-height: 60px; /* Fixed height for navbar */
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--dark-color);
+        background: white;
+        background-attachment: fixed;
+        position: relative;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        height: 80vh;
+        background: url("images/4.JPG");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      .hero-section .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        padding: 40px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+      }
+
+      .hero-content h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+      }
+
+      .hero-content p {
+        font-family: "Lora", serif;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          height: 60vh;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+      }
+
+      /* Overview Section */
+      .overview-section {
+        padding: 60px 20px;
+        background-color: #f8f8f8;
+        text-align: center;
+      }
+
+      h2.section-heading {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+
+      .overview-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .overview-divider {
+        width: 100px;
+        height: 2px;
+        background: var(--accent-color);
+        margin: 20px auto;
+      }
+
+      /* Venue Cards Section (Styled as Flexible Packages for consistency) */
+      .packages-section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .packages-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+      }
+
+      .package-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .package-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .package-card h3 {
+        font-family: "Playfair Display", serif;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+
+      .package-card p {
+        font-family: "Lora", serif;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .packages-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 40px 20px;
+        background: var(--primary-color);
+        color: #fff;
+        text-align: center;
+      }
+
+      .cta-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cta-container h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .cta-container p {
+        font-family: "Lora", serif;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .modal-content {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+        animation: fadeIn 0.5s ease;
+        position: relative;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #aaa;
+      }
+
+      .modal-close:hover {
+        color: #333;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: "Lora", serif;
+      }
+
+      .contact-form button {
+        background: #2b4e72; /* Fallback for --primary-color */
+        background: var(--primary-color, #2b4e72);
+        color: #f9f9f9; /* Fallback for --light-color */
+        color: var(--light-color, #f9f9f9);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
+        transition: background 0.3s;
+        margin-top: auto;
+      }
+
+      .contact-form button:hover {
+        background: #d4a373; /* Fallback for --highlight-color */
+        background: var(--highlight-color, #d4a373);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+        .packages-container {
+          grid-template-columns: 1fr;
+        }
+        .cta-container h2 {
+          font-size: 2rem;
+        }
+        .cta-container p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html"
+            ><img
+              src="images/index/output-onlinepngtools.png"
+              alt="Sunday Warwickshire Walton Hall Hotel & Spa Logo"
+              loading="lazy"
+          /></a>
+        </div>
+        <div class="nav-container">
+          <nav class="main-navigation" aria-label="Main Navigation">
+            <ul class="nav-menu">
+              <li class="has-dropdown">
+                <a href="about.html" aria-haspopup="true" aria-expanded="false"
+                  >About</a
+                >
+                <ul class="dropdown-menu" aria-label="About submenu">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+              <li><a href="rooms.html">Rooms</a></li>
+              <li class="has-dropdown">
+                <a href="#" aria-haspopup="true" aria-expanded="false"
+                  >Meetings & Events</a
+                >
+                <ul
+                  class="dropdown-menu"
+                  aria-label="Meetings and Events submenu"
+                >
+                  <li><a href="meetings.html">Meetings</a></li>
+                  <li><a href="events.html">Special Events</a></li>
+                  <li><a href="exclusivehire.html">Exclusive Hire</a></li>
+                </ul>
+              </li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="weddings.html">Weddings</a></li>
+              <li><a href="christmas.html">Christmas</a></li>
+              <li><a href="spa.html">Spa</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nav-book">
+          <a
+            href="https://booking.emea.hkclients.com/index.html#/booking/search?pc=ENWCW001&property_id=a21b3ab9-512f-413e-91bc-5077d3b10bb0&url=https://www.oyorooms.com/gb/292291/"
+            class="btn-book"
+            onclick="gtag('event', 'click', { 'event_category': 'Button', 'event_label': 'Book Now', 'value': 1 });"
+            >Book Now</a
+          >
+        </div>
+        <div
+          class="mobile-menu-toggle"
+          role="button"
+          aria-label="Toggle navigation"
+          tabindex="0"
+        >
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Exclusive Hire</h1>
+        <p>
+          Experience the entire estate for your private function, with the Hall
+          and its grounds all to yourselves.
+        </p>
+      </div>
+    </section>
+
+    <div class="container mx-auto">
+      <section class="overview-section">
+        <div class="overview-container">
+          <h2 class="section-heading">Exclusive Hire at Walton Hall</h2>
+          <div class="overview-divider"></div>
+          <p>
+            Make your special event truly extraordinary by reserving the entire
+            Walton Hall estate. Our exclusive hire option gives you and your
+            guests complete privacy and unparalleled access to our historic
+            manor house, beautifully manicured grounds, and luxurious amenities.
+          </p>
+          <p>
+            Perfect for corporate retreats, grand celebrations, or intimate
+            family gatherings, the estate includes elegant event spaces,
+            beautifully appointed rooms, and a dedicated team to cater to your
+            every need. Enjoy exclusive access to our spa, swimming pool, and
+            pristine gardens for a truly memorable experience.
+          </p>
+          <p>
+            Contact our dedicated events team to start planning your bespoke
+            event today.
+          </p>
+        </div>
+      </section>
+
+      <section class="packages-section bg-light">
+        <h2 class="section-heading">Our Exclusive Venues</h2>
+        <div class="overview-divider"></div>
+        <div class="packages-container">
+          <div class="package-card">
+            <img src="3.jpg" alt="The Manor House" />
+            <h3>The Manor House</h3>
+            <p>
+              The heart of our estate, featuring historic architecture and
+              elegant reception rooms perfect for a grand affair.
+            </p>
+          </div>
+          <div class="package-card">
+            <img
+              src="images/accomodation/Apartment.jpg"
+              alt="The Walton Suite"
+            />
+            <h3>The Walton Suite</h3>
+            <p>
+              A versatile and modern space within the hotel, ideal for large
+              conferences, banquets, or lavish parties.
+            </p>
+          </div>
+          <div class="package-card">
+            <img src="gardens.jpg" alt="The Gardens & Grounds" />
+            <h3>The Gardens & Grounds</h3>
+            <p>
+              Sprawling landscaped gardens and lakeside views offer a perfect
+              setting for outdoor ceremonies or team-building activities.
+            </p>
+          </div>
+          <div class="package-card">
+            <img src="dining1.jpg" alt="The Great Hall" />
+            <h3>The Great Hall</h3>
+            <p>
+              With its soaring ceilings and rich history, the Great Hall
+              provides a breathtaking backdrop for dining and entertainment.
+            </p>
+          </div>
+          <div class="package-card">
+            <img src="bar.jpg" alt="The Bar & Lounge" />
+            <h3>The Bar & Lounge</h3>
+            <p>
+              A sophisticated space for guests to relax, network, and enjoy
+              crafted cocktails throughout your event.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div id="contactModal" class="modal">
+        <div class="modal-content">
+          <span class="modal-close" onclick="closeModal()">&times;</span>
+          <h3 class="font-playfair text-2xl mb-4">Exclusive Hire Inquiry</h3>
+          <form
+            action="https://formsubmit.co/sanjam.singh1@oyorooms.com"
+            method="POST"
+            class="contact-form"
+          >
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <input type="tel" name="phone" placeholder="Phone Number" />
+            <textarea
+              rows="4"
+              name="details"
+              placeholder="Event Details (e.g., date, type, number of guests)"
+              required
+            ></textarea>
+            <input
+              type="hidden"
+              name="_subject"
+              value="Walton Exclusive Hire Inquiry"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://yourdomain.com/thank-you.html"
+            />
+            <button type="submit">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <h2>Plan Your Next Event</h2>
+        <p>
+          Contact our dedicated events team to customize your meeting or event.
+        </p>
+        <a
+          href="contact.html"
+          class="btn-primary"
+          onclick="gtag('event', 'click', { 'event_category': 'Button', 'event_label': 'Book Your Event', 'value': 1 });"
+          >Book Your Event</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <a href="contact.html" class="footer-button">Contact Us</a>
+          <address>
+            Sunday Warwickshire Walton Hall Hotel & Spa<br />
+            Walton, Wellesbourne, CV35 9HG<br />
+            <a href="tel:+441789842424">+44 01789 842424</a><br />
+            <a href="mailto:mice.waltonhall@hotelssunday.com"
+              >mice.waltonhall@hotelssunday.com</a
+            ><br />
+            <a href="https://www.instagram.com/waltonhallhotel"
+              >Instagram: waltonhallhotel</a
+            ><br />
+            <a href="https://www.facebook.com/WaltonHallHotel"
+              >Facebook: Walton Hall Hotel</a
+            >
+          </address>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="weddings.html">Weddings</a></li>
+            <li><a href="meetings.html">Meetings & Events</a></li>
+            <li><a href="christmas.html">Christmas</a></li>
+            <li><a href="spa.html">Spa & Leisure</a></li>
+            <li>
+              <a
+                href="https://www.visitwarwick.co.uk/"
+                target="_blank"
+                rel="noopener"
+                >Visit Warwickshire</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column newsletter">
+          <h4>Newsletter</h4>
+          <form
+            action="https://formsubmit.co/mice.waltonhall@hotelssunday.com"
+            method="POST"
+            class="newsletter-form"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email address"
+              required
+              aria-label="Your Email"
+            />
+            <button
+              class="btn"
+              type="submit"
+              aria-label="Subscribe to Newsletter"
+            >
+              Subscribe
+            </button>
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Newsletter Signup!"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://www.waltonhotelspa.com/newsletter?subscribed=true"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2025 Sunday Warwickshire Walton Hall Hotel & Spa. All rights
+          reserved.
+        </p>
+        <ul class="footer-legal">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileToggle = document.querySelector(".mobile-menu-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      mobileToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        mobileToggle.classList.toggle("active");
+        if (mobileToggle.classList.contains("active")) {
+          mobileToggle.querySelectorAll("span")[0].style.transform =
+            "rotate(45deg) translate(5px, 5px)";
+          mobileToggle.querySelectorAll("span")[1].style.opacity = "0";
+          mobileToggle.querySelectorAll("span")[2].style.transform =
+            "rotate(-45deg) translate(7px, -7px)";
+        } else {
+          mobileToggle.querySelectorAll("span")[0].style.transform = "none";
+          mobileToggle.querySelectorAll("span")[1].style.opacity = "1";
+          mobileToggle.querySelectorAll("span")[2].style.transform = "none";
+        }
+      });
+
+      // Modal functionality
+      const modal = document.getElementById("contactModal");
+      const closeBtn = document.querySelector(".modal-close");
+
+      function openModal() {
+        modal.style.display = "flex";
+      }
+
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // Event listener to open modal
+      document
+        .querySelector(".cta-section .btn-primary")
+        .addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent default link behavior
+          openModal();
+        });
+
+      // Event listeners to close modal
+      closeBtn.addEventListener("click", closeModal);
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Image error handling
+      document.querySelectorAll("img").forEach((img) => {
+        img.onerror = () => {
+          img.src = "images/placeholder.jpg";
+        };
+      });
+    </script>
+    <script src="index.scripts.js"></script>
+  </body>
+</html>

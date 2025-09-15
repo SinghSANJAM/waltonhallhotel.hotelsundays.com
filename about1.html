@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <title>About | Walton Hall Hotel & Spa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    :root {
+      --primary: #b59f84;
+      --dark: #1a1a1a;
+      --light: #fef9f3;
+      --accent: #d6ba8a;
+      --serif: 'Cinzel', serif;
+      --sans: 'Inter', sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--sans);
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    background-color: #ffff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img { height: 50px; }
+
+.main-navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-navigation ul li { margin: 0 15px; }
+
+.main-navigation ul li a {
+    color: rgb(24, 24, 24);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.main-navigation ul li a:hover { color: var(--primary-color); }
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+    .hero {
+      background: url('hall night.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--light);
+      position: relative;
+      object-fit: fill;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-text {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin: 1rem 0;
+    }
+    .btn {
+      background: var(--accent);
+      color: var(--dark);
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: var(--primary);
+    }
+    section.about {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .about h2 {
+      font-family: var(--serif);
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .about-block {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+    .about-block:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .about-block img {
+      width: 50%;
+      border-radius: 1rem;
+    }
+    .about-block div {
+      width: 50%;
+    }
+    .about-block p {
+      font-size: 1.1rem;
+    }
+    footer {
+      background: var(--dark);
+      color: var(--light);
+      padding: 2rem;
+      text-align: center;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    @media(max-width: 768px) {
+      .about-block {
+        flex-direction: column !important;
+      }
+      .about-block img, .about-block div {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Walton Hall Hotel & Spa Logo">
+            </a>
+        </div>
+        <nav class="main-navigation">
+            <ul class="nav-menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#dining">Dining</a></li>
+                <li><a href="#spa">Spa</a></li>
+                <li><a href="#weddings">Weddings</a></li>
+                <li><a href="#meetings">Meetings & Events</a></li>
+                <li><a href="#christmas">Christmas</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="booking-button">
+            <a href="https://booking.emea.hkclients.com/index.html#/booking/search?pc=ENWCW001&property_id=a21b3ab9-512f-413e-91bc-5077d3b10bb0&url=https://www.oyorooms.com/gb/292291/" class="btn-book" >Book Now</a>
+        </div>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+
+  <section class="hero">
+    <div class="hero-text" data-aos="fade-up">
+      <h1>Enchanted Escapes Await</h1>
+      <p>Step into a 16th-century manor of dreams</p>
+      <button class="btn" onclick="location.href='book.html'">Book Now</button>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2 data-aos="fade-up">Our Story</h2>
+    <div class="about-block" data-aos="fade-right">
+      <img src="countryside.jpg" alt="Warwickshire countryside">
+      <div>
+        <p>Discover 65 acres of serene countryside and timeless elegance. Walton Hall invites you to escape the ordinary with heritage charm, modern comforts, and enchanting surroundings.</p>
+      </div>
+    </div>
+    <div class="about-block" data-aos="fade-left">
+      <img src="manor.jpg" alt="Walton Hall">
+      <div>
+        <p>Walk the halls of history where the Mordaunt family once dwelled. The manor's grand staircases and glowing fireplaces create a magical setting for relaxation and celebration alike.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 Walton Hall Hotel & Spa | <a href="mailto:info@waltonhall.com">info@waltonhall.com</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
