@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeDiff = targetDate - now;
 
         if (timeDiff <= 0) {
-            daysEl.textContent = '00';
+            daysEl.textContent = '00';
             hoursEl.textContent = '00';
             minutesEl.textContent = '00';
             secondsEl.textContent = '00';
@@ -132,6 +132,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
 
     animatedElements.forEach(element => observer.observe(element));
+
+    // Track PDF Downloads
+    document.querySelectorAll('a[download]').forEach(link => {
+        link.addEventListener('click', () => {
+            const fileName = link.getAttribute('href').split('/').pop();
+            gtag('event', 'download', {
+                'event_category': 'PDF',
+                'event_label': fileName,
+                'value': 1
+            });
+        });
+    });
 
     // Initialize existing scripts
     if (typeof initMagazineCarousels === 'function') {
