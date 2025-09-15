@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sunday Warwickshire Walton Hall Hotel & Spa - Your dream wedding venue with elegant suites, historic St. James Chapel, and bespoke wedding planning.">
+  <meta name="keywords" content="wedding venue, Walton Hall, Warwickshire, luxury hotel, St. James Chapel, wedding planning, countryside weddings">
+  <meta name="author" content="Sunday Warwickshire Walton Hall Hotel & Spa">
+  <title>Sunday Warwickshire Walton Hall Hotel & Spa - Luxury Wedding Venue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Georgia&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    :root {
+      --primary-color: #9a7d57; /* Warm gold for elegance */
+      --secondary-color: #2e4033; /* Deep green for sophistication */
+      --accent-color: #d4b78f; /* Soft gold for highlights */
+      --light-color: #f9f9f9; /* Near-white for clean backgrounds */
+      --dark-color: #1a1a1a; /* Near-black for text */
+      --border-color: #e0e0e0; /* Light gray for borders */
+      --shadow: 0 8px 24px rgba(0,0,0,0.15);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-color);
+      background: var(--light-color);
+      margin: 0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--light-color);
+      background: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: var(--light-color);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .hero p {
+      font-family: 'Georgia', serif;
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: var(--light-color);
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: var(--light-color);
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-color);
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: 'Dancing Script', cursive;
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .section h2::after {
+      content: '';
+      width: 80px;
+      height: 3px;
+      background: var(--primary-color);
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section p {
+      font-family: 'Georgia', serif;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--dark-color);
+    }
+
+    .craft-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+      background: linear-gradient(135deg, rgba(249,249,249,0.95), rgba(255,255,255,0.95));
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .craft-content {
+      flex: 1;
+      min-width: 280px;
+      padding: 1.5rem;
+    }
+
+    .craft-content p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--dark-color);
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .craft-image {
+      flex: 1;
+      min-width: 280px;
+      max-width: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .craft-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: var(--transition);
+    }
+
+    .craft-image img:hover {
+      transform: scale(1.03);
+    }
+
+    .event-spaces {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .event-card {
+      background: var(--light-color);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .event-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .event-card:hover img {
+      filter: brightness(105%);
+    }
+
+    .event-card-content {
+      padding: 1.5rem;
+    }
+
+    .event-card h3 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin: 0.8rem 0;
+    }
+
+    .event-card p {
+      font-size: 1rem;
+      color: var(--dark-color);
+      max-width: 280px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .wedding-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: var(--secondary-color);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin: 2rem auto;
+      max-width: 1200px;
+    }
+
+    .wedding-image {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .wedding-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: var(--transition);
+    }
+
+    .wedding-image img:hover {
+      transform: scale(1.03);
+    }
+
+    .wedding-info {
+      flex: 1;
+      min-width: 280px;
+      padding: 1.5rem;
+    }
+
+    .wedding-info h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .wedding-info p {
+      font-size: 1rem;
+      color: var(--light-color);
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .custom-gallery-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      align-items: stretch;
+    }
+
+    .custom-tall-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .custom-right-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: 500px;
+    }
+
+    .custom-top-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      flex: 1;
+      height: 180px;
+    }
+
+    .custom-top-grid img,
+    .custom-horizontal-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .custom-horizontal-img img {
+      height: 320px;
+    }
+
+    .custom-gallery-layout img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .timeline-section {
+      padding: 4rem 1.5rem;
+      background: var(--light-color);
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 2rem auto;
+      min-height: 500px;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background: var(--primary-color);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-container {
+      padding: 15px 30px;
+      position: relative;
+      background: inherit;
+      width: 50%;
+    }
+
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background: var(--light-color);
+      border: 3px solid var(--primary-color);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .right::after {
+      left: -10px;
+    }
+
+    .timeline-content {
+      padding: 15px 25px;
+      background: var(--light-color);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-8px);
+    }
+
+    .timeline-content h3 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--primary-color);
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content p {
+      font-size: 1rem;
+      color: var(--dark-color);
+    }
+
+    .church-section {
+      padding: 5rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--light-color);
+      position: relative;
+      overflow: hidden;
+      border-top: 3px solid var(--secondary-color);
+      border-bottom: 3px solid var(--secondary-color);
+    }
+
+    .church-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://images.unsplash.com/photo-1515934751633-d970e452f2b3?auto=format&fit=crop&w=1920&q=80') center/cover;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .church-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .church-gallery .polaroid {
+      position: relative;
+      width: 400px;
+      padding: 15px;
+      background: var(--light-color);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .church-gallery .polaroid:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .church-gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid var(--secondary-color);
+      transition: var(--transition);
+    }
+
+    .church-gallery .polaroid:hover img {
+      filter: brightness(110%);
+    }
+
+    .church-gallery .polaroid-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--secondary-color);
+      color: var(--light-color);
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4rem;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .church-gallery .polaroid:hover .polaroid-caption {
+      opacity: 1;
+      bottom: 15px;
+    }
+
+    .testimonial-carousel {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: var(--accent-color);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .testimonial-slide {
+      display: none;
+      animation: fadeIn 1s ease;
+    }
+
+    .testimonial-slide.active {
+      display: block;
+    }
+
+    .testimonial-slide h3 {
+      font-family: 'Dancing Script', cursive;
+      color: var(--light-color);
+      font-size: 1.6rem;
+    }
+
+    .testimonial-slide p {
+      color: var(--dark-color);
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+
+    .testimonial-slide .author {
+      font-weight: bold;
+      color: var(--secondary-color);
+      font-size: 1rem;
+    }
+
+    .carousel-controls {
+      margin-top: 1.5rem;
+    }
+
+    .carousel-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      margin: 0 6px;
+      cursor: pointer;
+      opacity: 0.5;
+      border: 2px solid var(--light-color);
+      transition: var(--transition);
+    }
+
+    .carousel-dot.active {
+      opacity: 1;
+      border: 2px solid var(--accent-color);
+      transform: scale(1.2);
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, var(--secondary-color), #3a5d40);
+      text-align: center;
+      padding: 4rem 1.5rem;
+      color: var(--light-color);
+    }
+
+    .contact-section a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: var(--transition);
+    }
+
+    .contact-section a:hover {
+      color: var(--light-color);
+    }
+
+    .wave {
+      display: block;
+      width: 100%;
+      height: 80px;
+      margin-bottom: -1px;
+      fill: var(--light-color);
+      animation: waveAnimation 10s linear infinite;
+    }
+
+    .floating-petals {
+      pointer-events: none;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0; top: 0;
+      z-index: 2;
+    }
+
+    .petal {
+      position: absolute;
+      font-size: 1.8rem;
+      opacity: 0.6;
+      animation: floatPetal 12s linear infinite;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.95);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      transform: scale(0.9);
+      transition: var(--transition);
+    }
+
+    .lightbox.active img {
+      transform: scale(1);
+    }
+
+    .lightbox-close {
+      background: var(--primary-color);
+      color: var(--light-color);
+      border: none;
+      font-size: 1.8rem;
+      border-radius: 50%;
+      width: 40px; height: 40px;
+      position: absolute;
+      top: 20px; right: 30px;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-close:hover {
+      background: var(--accent-color);
+      transform: scale(1.1);
+    }
+
+    @keyframes floatPetal {
+      0% { transform: translateY(-100px) scale(1) rotate(0deg); opacity: 0.6; }
+      50% { transform: translateY(50vh) scale(1.2) rotate(180deg); opacity: 0.8; }
+      100% { transform: translateY(100vh) scale(1.4) rotate(360deg); opacity: 0; }
+    }
+
+    @keyframes waveAnimation {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-1440px); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-60px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .hero { min-height: 70vh; }
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.1rem; }
+      .section h2 { font-size: 2rem; }
+      .section { padding: 2rem 1rem; }
+      .craft-section { flex-direction: column; padding: 1.5rem; }
+      .event-spaces { grid-template-columns: 1fr; }
+      .event-card img { height: 200px; }
+      .wedding-highlight { flex-direction: column; }
+      .custom-gallery-layout { grid-template-columns: 1fr; }
+      .custom-right-grid { height: auto; }
+      .custom-top-grid { height: auto; }
+      .custom-horizontal-img img { height: 280px; }
+      .timeline::after { left: 31px; }
+      .timeline-container { width: 100%; padding-left: 60px; padding-right: 20px; }
+      .timeline-container::after { left: 15px; }
+      .right { left: 0; }
+      .church-section { padding: 3rem 1rem; }
+      .church-gallery { flex-direction: column; gap: 1.5rem; }
+      .church-gallery .polaroid { width: 100%; }
+      .church-gallery img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="site-header" role="banner">
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/index/output-onlinepngtools.png" alt="Walton Hall Hotel & Spa Logo" />
+          </a>
+        </div>
+        <nav class="main-navigation" aria-label="Main navigation">
+          <ul class="nav-menu">
+            <li class="dropdown">
+              <a href="#" aria-haspopup="true" aria-expanded="false">About</a>
+              <ul class="dropdown-menu">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li class="dropdown">
+              <a href="#" aria-haspopup="true" aria-expanded="false">Meetings & Events</a>
+              <ul class="dropdown-menu">
+                <li><a href="meetings.html">Meetings</a></li>
+                <li><a href="events.html">Special Events</a></li>
+                <li><a href="exclusivehire.html">Exclusive Hire</a></li>
+              </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="weddings.html">Weddings</a></li>
+            <li><a href="christmas.html">Christmas</a></li>
+            <li><a href="https://www.vagaro.com/uk01/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVKOUWVD15XSjc0gHFQa+P52nY+71mFX0UTTLeFv6B/FsabAs5cyoxouVJ60ZqQreei4m10nSaBpIXspPkhGQ/bJvzB1+SM376okjrvm1iXOQN4Sh5OqN1JT/Gv7gHLI7EyEwXD7h9VIl7VaIdESKqY/cjk/3zwEUNX9esZhExOmTykWoApKMIcc1GOlrdZeoBVW4xe209AERY8uH28fOwBk+o+abcPS584y+nIS8nWDEzUlLns3xnzgcUNfwFUSX3LqQzqg9tVzlt1cwVnSpNaHQIZabCnsP+ZiT2ofUrKGARubyMynKnepGE8e38Ncrv3Vm7s27EDJ4QIJ6JXMJ0cVqlrWu9+BKpLFYFuBTn5nwrEbdgtsFCRNOidcFiFtRHtv1UMQ/Zg6aQzTx74FCkaAKSGtmdiW72TS6hUPx9bN7QG5P7fBR1hZf5h2Oi7kEIw==" target="_blank" rel="noopener noreferrer">Spa</a></li>
+          </ul>
+        </nav>
+        <div class="booking-button">
+          <a href="https://booking.emea.hkclients.com/index.html#/booking/search?pc=ENWCW001&property_id=a21b3ab9-512f-413e-91bc-5077d3b10bb0&url=https://www.oyorooms.com/gb/292291/" class="btn-book">Book Now</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    
+    <section class="hero">
+      <div class="floating-petals" id="floating-petals"></div>
+      <div class="hero-content" data-aos="fade-in">
+        <h1>Your Dream Wedding Awaits</h1>
+        <p>Elegant settings for your perfect day at Sunday Warwickshire Walton Hall Hotel & Spa</p>
+        <a href="#contact" class="btn-primary">Start Planning</a>
+      </div>
+    </section>
+    <svg class="wave" viewBox="0 0 1440 80"><path fill="#f9f9f9" fill-opacity="1" d="M0,0 C480,80 960,0 1440,80 L1440,0 L0,0 Z"></path></svg>
+
+    <section class="section">
+      <h2 data-aos="fade-up">Craft Your Perfect Day</h2>
+      <div class="craft-section" data-aos="fade-up" data-aos-delay="100">
+        <div class="craft-content">
+          <p>At Sunday Warwickshire Walton Hall Hotel & Spa, your wedding is crafted with timeless elegance. Nestled within 65 acres of breathtaking countryside, our 16th-century Hall offers a romantic backdrop, complete with the historic St. James Chapel for your vows.</p>
+          <p>From your arrival, our venue promises unparalleled photo opportunities. Choosing the perfect setting is a pivotal decision, and our dedicated team is here to orchestrate every detail, ensuring a seamless celebration tailored to your vision.</p>
+          <p>Whether you envision an intimate gathering or a grand celebration for up to 150 guests, we cater to all love stories—marriages, civil partnerships, or vow renewals—delivering a day without compromise.</p>
+        </div>
+        <div class="craft-image">
+          <img src="images/banquet/wedding-ceremony.jpg" alt="Wedding Ceremony at Walton Hall">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-aos="fade-up">Exquisite Event Spaces</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Discover our luxurious suites, each designed to elevate your wedding day into an extraordinary experience.</p>
+      <div class="event-spaces" data-aos="fade-up" data-aos-delay="200">
+        <div class="event-card">
+          <img src="images/banquet/Moncrieffe Banqueting 11.jpg" alt="Moncrieffe Suite">
+          <div class="event-card-content">
+            <h3>Moncrieffe Suite</h3>
+            <p>Immerse yourself in the grandeur of the Moncrieffe Suite, featuring soaring ceilings, dazzling chandeliers, and elegant fireplaces. Licensed for ceremonies of up to 120 guests, with doors opening to our picturesque grounds.</p>
+            <a href="#contact" class="btn-primary">Explore More</a>
+          </div>
+        </div>
+        <div class="event-card">
+          <img src="images/banquet/Wedding Mordant Banquet (1).png" alt="Mordaunt Suite">
+          <div class="event-card-content">
+            <h3>Mordaunt Suite</h3>
+            <p>Perfect for intimate weddings, the Mordaunt Suite offers a cozy yet sophisticated setting for private dining and ceremonies, accommodating up to 60 guests.</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <img src="images/banquet/Courtyard Banquet (1).png" alt="Courtyard Suite">
+          <div class="event-card-content">
+            <h3>Courtyard Suite</h3>
+            <p>Modern and spacious, the Courtyard Suite boasts a private entrance and is ideal for larger celebrations, hosting up to 170 guests for your ceremony.</p>
+            <a href="#contact" class="btn-primary">Explore More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wedding-highlight" data-aos="fade-up">
+      <div class="wedding-image">
+        <img src="images/banquet/mordaunt.jpg" alt="Outdoor Ceremony">
+      </div>
+      <div class="wedding-info">
+        <h3>Outdoor Ceremonies</h3>
+        <p>Exchange vows amidst nature with our historic Hall as a stunning backdrop, creating unforgettable moments and perfect photographs.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-aos="fade-up">Timeless Moments</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Relive the magic with our stunning venues and scenic landscapes.</p>
+      <div class="custom-gallery-layout" data-aos="fade-up" data-aos-delay="200">
+        <div class="custom-tall-img">
+          <img src="images/banquet/45.jpg" alt="First Dance">
+        </div>
+        <div class="custom-right-grid">
+          <div class="custom-top-grid">
+            <img src="images/banquet/Wedding 2.png" alt="Reception" class="hover-swap-img">
+            <img src="images/banquet/wedding.jpg" alt="Garden">
+          </div>
+          <div class="custom-horizontal-img">
+            <img src="images/banquet/Hall Windows.png" alt="Driveway Scene">
+          </div>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">×</button>
+        <img src="" alt="" id="lightbox-img">
+      </div>
+    </section>
+
+    <section class="timeline-section" data-aos="fade-up">
+      <h2>Our Wedding Journey</h2>
+      <p>From planning to celebration, your day unfolds beautifully.</p>
+      <div class="timeline">
+        <div class="timeline-container left" data-aos="fade-right">
+          <div class="timeline-content">
+            <h3>Initial Consultation</h3>
+            <p>Meet our planners to discuss your vision and explore our venue.</p>
+          </div>
+        </div>
+        <div class="timeline-container right" data-aos="fade-left">
+          <div class="timeline-content">
+            <h3>Venue Booking</h3>
+            <p>Secure your date and choose your perfect event space.</p>
+          </div>
+        </div>
+        <div class="timeline-container left" data-aos="fade-right">
+          <div class="timeline-content">
+            <h3>Custom Planning</h3>
+            <p>Tailor your menu, decor, and details with our expert team.</p>
+          </div>
+        </div>
+        <div class="timeline-container right" data-aos="fade-left">
+          <div class="timeline-content">
+            <h3>Your Wedding Day</h3>
+            <p>Celebrate your love in a flawless, unforgettable event.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="church-section" data-aos="fade-up">
+      <h2 data-aos="fade-up">St. James Chapel</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Exchange your vows in the enchanting St. James Chapel, where history and romance intertwine for a sacred moment.</p>
+      <div class="church-gallery" data-aos="fade-up" data-aos-delay="200">
+        <div class="polaroid">
+          <img src="images/banquet/Church Onsite 1.jpg" alt="St. James Chapel Exterior">
+          <span class="polaroid-caption">Chapel Exterior</span>
+        </div>
+        <div class="polaroid">
+          <img src="images/banquet/Church Onsite 1.jpg" alt="St. James Chapel Exterior">
+          <span class="polaroid-caption">Chapel Exterior</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-aos="fade-up">Unforgettable Celebrations</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Every detail, from ceremony to reception, is crafted with care.</p>
+      <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+        <p>Our dedicated team ensures your dreams become reality, creating a bespoke wedding as unique as your love story.</p>
+        <p>We plan every detail with precision, from your wedding breakfast to the evening reception, ensuring a seamless and joyful day.</p>
+        <p>Enjoy tailor-made packages with seasonal, locally inspired menus. Our Wedding Planner will handle every detail, so you can relax and celebrate.</p>
+        <p>We offer preferential accommodation rates for your guests, extendable before and after your wedding for those exploring nearby historic towns.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-aos="fade-up" data-aos-delay="300">Visit Us</h2>
+      <p data-aos="fade-up" data-aos-delay="400">Come meet us for a tour of the hotel, expert advice on photo backdrops, room dressing, and answers to all your questions.</p>
+      <p data-aos="fade-up" data-aos-delay="500">
+        <strong>Call:</strong> <a href="tel:+441789842424">+44 1789 842424</a> | 
+        <strong>Email:</strong> <a href="mailto:mice.waltonhall@hotelssunday.com">mice.waltonhall@hotelssunday.com</a>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 data-aos="fade-up">Love Stories Shared</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Hear from couples who celebrated with us.</p>
+      <div class="testimonial-carousel" id="testimonial-carousel" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-slide active">
+          <h3>A Dream Come True</h3>
+          <p>Walton Hall turned our vision into reality with stunning decor and flawless service.</p>
+          <p class="author">Emma & Liam</p>
+        </div>
+        <div class="testimonial-slide">
+          <h3>Pure Magic</h3>
+          <p>Every moment was perfect, from the chapel to the evening reception.</p>
+          <p class="author">Sophie & Tom</p>
+        </div>
+        <div class="testimonial-slide">
+          <h3>Unforgettable Day</h3>
+          <p>The team’s attention to detail made our wedding truly special.</p>
+          <p class="author">Aisha & Daniel</p>
+        </div>
+        <div class="carousel-controls" id="testimonial-dots"></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" data-aos="fade-up">
+      <h2>Begin Your Love Story</h2>
+      <p>Reach out to our Wedding Planner or download our brochure.</p>
+      <p>
+        <a href="tel:+441789842424">+44 1789 842424</a> | 
+        <a href="mailto:mice.waltonhall@hotelssunday.com">mice.waltonhall@hotelssunday.com</a>
+      </p>
+      <div class="flex justify-center gap-4 mt-4">
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+        <a href="Walton_Wedding_Brochure.pdf" class="btn-primary" target="_blank">Download Brochure</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Floating Petals Animation
+    function createPetal() {
+      const petal = document.createElement('span');
+      petal.className = 'petal';
+      petal.textContent = '*';
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.fontSize = (Math.random() * 1.2 + 1.2) + 'rem';
+      petal.style.animationDuration = (Math.random() * 5 + 8) + 's';
+      petal.style.top = '-100px';
+      document.getElementById('floating-petals').appendChild(petal);
+      setTimeout(() => petal.remove(), 20000);
+    }
+    setInterval(createPetal, 15000);
+
+    // Lightbox Functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+    document.querySelectorAll('.custom-gallery-layout img, .church-gallery img, .craft-image img, .event-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightbox.classList.add('active');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+      });
+    });
+    lightboxClose.onclick = () => {
+      lightbox.classList.remove('active');
+      lightbox.style.display = 'none';
+    };
+    lightbox.onclick = e => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        lightbox.style.display = 'none';
+      }
+    };
+
+    // Testimonial Carousel
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dotsContainer = document.getElementById('testimonial-dots');
+    let currentSlide = 0;
+    function showSlide(idx) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === idx));
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => dot.classList.toggle('active', i === idx));
+    }
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => { currentSlide = i; showSlide(i); }
+      dotsContainer.appendChild(dot);
+    });
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+  </script>
+</body>
+</html>
