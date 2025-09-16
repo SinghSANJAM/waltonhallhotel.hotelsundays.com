@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Constants
-    const SLIDE_INTERVAL = 9000;
+    const SLIDE_INTERVAL = 12000;
     const DEBOUNCE_DELAY = 100;
     const highlights = {
         walking: "Enjoy tranquil walks along the lake’s edge. Discover hidden paths and native wildlife.",
